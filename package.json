@@ -1,0 +1,25 @@
+{
+  "name": "node-api-restful",
+  "version": "1.0.0",
+  "description": "A simple project to get knowledge about Node.js and how to build a web service with it.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/LeonardoSSev/node-api-restful.git"
+  },
+  "keywords": [
+    "node",
+    "api",
+    "restful",
+    "express"
+  ],
+  "author": "leonardossev",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/LeonardoSSev/node-api-restful/issues"
+  },
+  "homepage": "https://github.com/LeonardoSSev/node-api-restful#readme"
+}
