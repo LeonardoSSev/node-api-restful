@@ -2,7 +2,7 @@
   "name": "node-api-restful",
   "version": "1.0.0",
   "description": "A simple project to get knowledge about Node.js and how to build a web service with it.",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
