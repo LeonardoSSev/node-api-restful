@@ -30,3 +30,5 @@ let group = [
         isProgrammer: true
     }
 ];
+
+module.exports = group;
