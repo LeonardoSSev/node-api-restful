@@ -1,6 +1,6 @@
 {
   "name": "node-api-restful",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A simple project to get knowledge about Node.js and how to build a web service with it.",
   "main": "index.js",
   "scripts": {
