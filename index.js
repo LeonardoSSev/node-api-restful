@@ -63,3 +63,13 @@ app.delete('/api/group/:id', (req, res) => {
 
     res.status(200).send(person);
 });
+
+function validatePerson(person) {
+    const schema = {
+        name: Joi.string().min(3).max(30).required(),
+        age: Join.number().integer().min(0).required(),
+        isProgrammer: Join.boolean().required()
+    };
+
+    return Joi.validate(person, schema);
+}
