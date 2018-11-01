@@ -51,3 +51,15 @@ app.put('/api/group/:id', (req, res) => {
 
     res.status(200).send(person);
 });
+
+app.delete('/api/group/:id', (req, res) => {
+    const person = group.find(person => {
+        return person.id === parseInt(req.params.id);
+    });
+
+    const personIndex = group.indexOf(req.params.id);
+
+    group.splice(personIndex, 1);
+
+    res.status(200).send(person);
+});
