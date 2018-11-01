@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
-const Joi = require('joi')
+const Joi = require('joi');
 
 let group = require('./store');
 
