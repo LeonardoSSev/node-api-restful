@@ -17,3 +17,11 @@ app.get('/',  (req, res) => {
 app.get('/api/group', (req, res) => {
    res.status(200).send(group);
 });
+
+app.get('/api/group/:id', (req, res) => {
+    const person = group.find(person => {
+        return person.id === parseInt(req.params.id);
+    });
+
+    res.status(200).send(JSON.stringify(person));
+});
