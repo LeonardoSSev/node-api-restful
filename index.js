@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
+app.use(express.json());
 
 const Joi = require('joi');
 
@@ -25,3 +26,4 @@ app.get('/api/group/:id', (req, res) => {
 
     res.status(200).send(JSON.stringify(person));
 });
+
