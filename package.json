@@ -14,7 +14,11 @@
     "node",
     "api",
     "restful",
-    "express"
+    "express",
+    "expressjs",
+    "js",
+    "nodemon",
+    "joi"
   ],
   "author": "leonardossev",
   "license": "Apache-2.0",
