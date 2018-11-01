@@ -28,6 +28,12 @@ app.get('/api/group/:id', (req, res) => {
 });
 
 app.post('/api/group', (req, res) => {
+    const { error } = validatePerson(req.body);
+
+    if (error) {
+        return res.status(400).send(error.details[0].message);
+    }
+
     const person = {
         id: group.length + 1,
         name: req.body.name,
@@ -41,6 +47,12 @@ app.post('/api/group', (req, res) => {
 });
 
 app.put('/api/group/:id', (req, res) => {
+    const { error } = validatePerson(req.body);
+
+    if (error) {
+        return res.status(400).send(error.details[0].message);
+    }
+
     const person = group.find(person => {
         return person.id === parseInt(req.params.id);
     });
