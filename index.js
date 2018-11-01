@@ -27,3 +27,15 @@ app.get('/api/group/:id', (req, res) => {
     res.status(200).send(JSON.stringify(person));
 });
 
+app.post('/api/group', (req, res) => {
+    const person = {
+        id: group.length + 1,
+        name: req.body.name,
+        age: parseInt(req.body.age),
+        isProgrammer: JSON.parse(req.body.isProgrammer)
+    };
+
+    group.push(person);
+
+    res.status(200).send(person);
+});
