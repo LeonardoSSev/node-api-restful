@@ -24,6 +24,10 @@ app.get('/api/group/:id', (req, res) => {
         return person.id === parseInt(req.params.id);
     });
 
+    if (!person) {
+        return res.status(404).send('The person with the given ID was not found in the group.');
+    }
+
     res.status(200).send(JSON.stringify(person));
 });
 
@@ -57,6 +61,10 @@ app.put('/api/group/:id', (req, res) => {
         return person.id === parseInt(req.params.id);
     });
 
+    if (!person) {
+        return res.status(404).send('The person with the given ID was not found in the group.');
+    }
+
     person.name = req.body.name;
     person.age = parseInt(req.body.age);
     person.isProgrammer = JSON.parse(req.body.isProgrammer);
@@ -68,6 +76,10 @@ app.delete('/api/group/:id', (req, res) => {
     const person = group.find(person => {
         return person.id === parseInt(req.params.id);
     });
+
+    if (!person) {
+        return res.status(404).send('The person with the given ID was not found in the group.');
+    }
 
     const personIndex = group.indexOf(req.params.id);
 
